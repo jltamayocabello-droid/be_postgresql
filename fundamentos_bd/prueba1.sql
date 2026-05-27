@@ -1,0 +1,21 @@
+CREATE TABLE usuarios (
+	id SERIAL PRIMARY KEY,
+	nombre TEXT NOT NULL,
+	email TEXT UNIQUE NOT NULL
+);
+
+SELECT * FROM usuarios;
+
+CREATE TABLE productos (
+	id INT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+	nombre TEXT NOT NULL
+);
+
+CREATE TABLE pedidos (
+	id SERIAL PRIMARY KEY,
+	total NUMERIC(10,2) NOT NULL,
+	usuario_id INT NOT NULL,
+	CONSTRAINT fk_usuario
+		FOREIGN KEY (usuario_id)
+		REFERENCES usuarios(id)
+);
