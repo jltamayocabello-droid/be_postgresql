@@ -13,3 +13,7 @@ CONTENIDOS
     Operadores lógicos y de comparación
     Funciones agregadas: COUNT, SUM, AVG, MIN, MAX
     GROUP BY, HAVING, DISTINCT, subconsultas, CASE WHEN
+7. Relaciones y Joins
+    Relaciones 1:1, 1:N, N:N
+    INNER, LEFT, RIGHT, FULL JOIN
+    Buen uso de claves foráneas
