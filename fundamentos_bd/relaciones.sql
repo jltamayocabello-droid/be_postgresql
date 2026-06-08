@@ -8,3 +8,14 @@ CREATE TABLE pedidos (
 	FOREIGN KEY (cliente_id)
 		REFERENCES clientes(id)
 )
+
+CREATE TABLE personas (
+	id SERIAL PRIMARY KEY
+)
+
+CREATE TABLE pasaporte (
+	id SERIAL PRIMARY KEY,
+	persona:id INTEGER UNIQUE NOT NULL,
+	FOREIGN KEY (persona_id) REFERENCES personas(id)
+)
+
