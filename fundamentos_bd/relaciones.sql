@@ -19,3 +19,18 @@ CREATE TABLE pasaporte (
 	FOREIGN KEY (persona_id) REFERENCES personas(id)
 )
 
+CREATE TABLE estudiantes (
+	id SERIAL PRIMARY KEY
+)
+
+CREATE TABLE asignaturas (
+	id SERIAL PRIMARY KEY
+)
+
+CREATE TABLE inscripciones (
+	estudiante_id INTEGER NOT NULL,
+	asignatura_id INTEGER NOT NULL,
+	PRIMARY KEY (estudiante_id, asignatura_id),
+	FOREIGN KEY (estudiante_id) REFERENCES estudiantes(id),
+	FOREIGN KEY (asignatura_id) REFERENCES asignaturas(id)
+)
