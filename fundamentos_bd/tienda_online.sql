@@ -1,5 +1,6 @@
 
 
+
 CREATE TABLE usuarios(
 	id SERIAL PRIMARY KEY,
 	nombre VARCHAR(100) NOT NULL,
@@ -62,58 +63,3 @@ INSERT INTO productos (nombre, precio, categoria, stock) VALUES
 ('notebook gamer', 800.000, 'electronica', 15)
 
 SELECT COUNT(*) AS total_productos
-FROM productos
-
-SELECT COUNT(*) AS total_productos
-FROM productos
-WHERE categoria = 'ropa'
-
-SELECT * FROM ventas
-
-SELECT SUM(total) AS ingresos_totales
-FROM ventas
-
-SELECT AVG(precio) AS precio_promedio
-FROM productos
-
-SELECT 
-	MIN(precio) AS precio_mas_bajo,
-	MAX(precio) AS precio_mas_alto
-FROM productos
-
-SELECT
-	producto_id,
-	COUNT(*) AS cantidad_ventas,
-	SUM(total) AS unidades_vendidas,
-	SUM(total) AS ingreso_por_producto
-FROM ventas
-GROUP BY producto_id
-ORDER BY ingreso_por_producto DESC
-
-SELECT
-	producto_id,
-	SUM(total) AS ingresos
-FROM ventas
-GROUP BY producto_id
-HAVING SUM(total) > 1000
-ORDER BY ingresos DESC
-
-SELECT DISTINCT categoria
-FROM productos
-
-SELECT nombre, precio
-FROM productos
-WHERE precio = (
-	SELECT MAX(precio)
-	FROM productos
-)
-
-SELECT nombre, precio,
-	CASE
-		WHEN precio >= 1000 THEN 'Premium'
-		WHEN precio >= 100 THEN 'Alto'
-		WHEN precio >= 50 Then 'Medio'
-		ELSE 'Economico'
-	END AS categoria_precio
-FROM productos
-ORDER BY precio DESC
