@@ -34,3 +34,14 @@ CREATE TABLE inscripciones (
 	FOREIGN KEY (estudiante_id) REFERENCES estudiantes(id),
 	FOREIGN KEY (asignatura_id) REFERENCES asignaturas(id)
 )
+
+INSERT INTO clientes (id) VALUES (1), (2), (3)
+
+INSERT INTO pedidos (cliente_id) VALUES (1), (2), (3)
+
+SELECT
+	clientes.id AS cliente_id,
+	pedidos.id AS pedido_id
+FROM clientes
+INNER JOIN pedidos
+	ON clientes.id = pedidos.cliente_id
