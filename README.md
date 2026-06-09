@@ -17,3 +17,7 @@ CONTENIDOS
     Relaciones 1:1, 1:N, N:N
     INNER, LEFT, RIGHT, FULL JOIN
     Buen uso de claves foráneas
+8. Índices y Perfomance
+    Tipos de índices: B-Tree, Hash, GIN, GiST, BRIN
+    Índices compuestos, parciales e índices para JSONB
+    Uso de EXPLAIN y EXPLAIN ANALIZE
