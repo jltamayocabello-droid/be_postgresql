@@ -53,3 +53,11 @@ FROM clientes
 LEFT JOIN pedidos
 	ON clientes.id = pedidos.cliente_id
 
+
+SELECT 
+	clientes.id AS cliente_id,
+	pedidos.id AS pedido_id
+FROM clientes
+RIGHT JOIN pedidos
+	ON clientes.id = pedidos.cliente_id
+
