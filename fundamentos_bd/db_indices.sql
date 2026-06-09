@@ -20,3 +20,11 @@ INSERT INTO personas (nombre, edad) VALUES
 EXPLAIN ANALYZE
 SELECT * FROM personas
 WHERE edad = 40
+
+CREATE INDEX
+idx_personas_edad
+ON personas
+(edad);
+
+CREATE INDEX idx_personas_edad_hash
+ON personas USING HASH (edad);
