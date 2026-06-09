@@ -37,7 +37,7 @@ CREATE TABLE inscripciones (
 
 INSERT INTO clientes (id) VALUES (1), (2), (3)
 
-INSERT INTO pedidos (cliente_id) VALUES (1), (2), (3)
+INSERT INTO pedidos (cliente_id) VALUES (1), (1), (3)
 
 SELECT
 	clientes.id AS cliente_id,
@@ -53,7 +53,6 @@ FROM clientes
 LEFT JOIN pedidos
 	ON clientes.id = pedidos.cliente_id
 
-
 SELECT 
 	clientes.id AS cliente_id,
 	pedidos.id AS pedido_id
@@ -61,3 +60,10 @@ FROM clientes
 RIGHT JOIN pedidos
 	ON clientes.id = pedidos.cliente_id
 
+
+SELECT 
+	clientes.id AS cliente_id,
+	pedidos.id AS pedido_id
+FROM clientes
+FULL JOIN pedidos
+	ON clientes.id = pedidos.cliente_id
