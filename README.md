@@ -21,3 +21,7 @@ CONTENIDOS
     Tipos de índices: B-Tree, Hash, GIN, GiST, BRIN
     Índices compuestos, parciales e índices para JSONB
     Uso de EXPLAIN y EXPLAIN ANALIZE
+9. Transacciones y concurrencia
+    BEGIN, COMMIT, ROLLBACK
+    ACID, Locks, MVCC
+    Niveles de aislamiento y deadlocks
