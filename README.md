@@ -25,3 +25,6 @@ CONTENIDOS
     BEGIN, COMMIT, ROLLBACK
     ACID, Locks, MVCC
     Niveles de aislamiento y deadlocks
+10. Funciones, procedimientos y triggers
+    CREATE FUNCTION, CREATE PROCEDURE, PL/pgSQL
+    Triggers BEFORE/AFTER para INSERT/UPDATE/DELETE
