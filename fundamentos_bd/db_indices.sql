@@ -28,3 +28,12 @@ ON personas
 
 CREATE INDEX idx_personas_edad_hash
 ON personas USING HASH (edad);
+
+CREATE TABLE cuentas (
+	id SERIAL PRIMARY KEY,
+	nombre TEXT,
+	saldo INTEGER
+)
+
+INSERT INTO cuentas (nombre, saldo)
+VALUES ('Juan', 1000)
