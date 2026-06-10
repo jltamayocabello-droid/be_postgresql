@@ -65,3 +65,7 @@ ALTER TABLE cuentas
 ADD CONSTRAINT saldo_no_negativo CHECK (saldo >= 0)
 
 
+BEGIN;
+UPDATE cuentas SET saldo = saldo + 100 WHERE nombre = 'Juan'
+
+SELECT * FROM cuentas
