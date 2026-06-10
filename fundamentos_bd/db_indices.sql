@@ -37,3 +37,10 @@ CREATE TABLE cuentas (
 
 INSERT INTO cuentas (nombre, saldo)
 VALUES ('Juan', 1000)
+
+BEGIN;
+UPDATE cuentas
+SET saldo = saldo - 200
+WHERE nombre = 'Juan';
+
+COMMIT;
