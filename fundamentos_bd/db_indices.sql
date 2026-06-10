@@ -44,3 +44,13 @@ SET saldo = saldo - 200
 WHERE nombre = 'Juan';
 
 COMMIT;
+
+
+BEGIN;
+UPDATE cuentas
+SET saldo = saldo - 500
+WHERE nombre = 'Juan';
+
+SELECT * FROM cuentas
+
+ROLLBACK
