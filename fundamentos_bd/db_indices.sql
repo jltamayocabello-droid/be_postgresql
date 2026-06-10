@@ -53,4 +53,15 @@ WHERE nombre = 'Juan';
 
 SELECT * FROM cuentas
 
-ROLLBACK
+ROLLBACK;
+
+BEGIN; 
+UPDATE cuentas
+SET saldo = saldo - 300
+
+ROLLBACK;
+
+ALTER TABLE cuentas
+ADD CONSTRAINT saldo_no_negativo CHECK (saldo >= 0)
+
+
