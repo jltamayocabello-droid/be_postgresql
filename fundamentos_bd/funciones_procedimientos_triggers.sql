@@ -40,6 +40,8 @@ $$ LANGUAGE plpgsql;
 
 SELECT verificar_numero(-4);
 SELECT verificar_numero(10);
+SELECT verificar_numero(0);
+
 
 
 
