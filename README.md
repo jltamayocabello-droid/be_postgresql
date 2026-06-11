@@ -31,3 +31,7 @@ CONTENIDOS
 11. Seguridad y usuarios
     Roles y permisos (GRANT, REVOKE)
     Autenticación, control de acceo, RLS
+12. BACKUP y restauración
+    pg_dump, pg_restore
+    Backups lógicos v/s físicos
+    Estrategias de respaldo y restauración parcial
