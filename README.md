@@ -28,3 +28,6 @@ CONTENIDOS
 10. Funciones, procedimientos y triggers
     CREATE FUNCTION, CREATE PROCEDURE, PL/pgSQL
     Triggers BEFORE/AFTER para INSERT/UPDATE/DELETE
+11. Seguridad y usuarios
+    Roles y permisos (GRANT, REVOKE)
+    Autenticación, control de acceo, RLS
