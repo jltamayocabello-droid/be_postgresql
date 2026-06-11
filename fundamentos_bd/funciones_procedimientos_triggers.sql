@@ -19,3 +19,30 @@ END;
 $$;
 
 CALL mostrar_mensaje();
+
+
+CREATE OR REPLACE FUNCTION verificar_numero(numero INT) RETURNS TEXT
+AS $$
+DECLARE
+	resultado TEXT;
+BEGIN
+	IF numero > 0 THEN
+		resultado := 'El numero es positivo';
+	ELSIF numero < 0 THEN
+		resultado := 'El numero es negativo';
+	ELSE
+		resultado := 'El numero es cero';
+	END IF;
+
+	RETURN resultado;
+END
+$$ LANGUAGE plpgsql;
+
+SELECT verificar_numero(-4);
+SELECT verificar_numero(10);
+
+
+
+
+
+
