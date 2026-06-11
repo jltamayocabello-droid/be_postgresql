@@ -8,3 +8,14 @@ $$ LANGUAGE plpgsql;
 SELECT sumar_dos_numeros(5, 7);
 
 DROP FUNCTION sumar_dos_numeros(integer, integer);
+
+
+CREATE OR REPLACE PROCEDURE mostrar_mensaje()
+LANGUAGE plpgsql
+AS $$
+BEGIN
+	RAISE NOTICE 'Hola este es un procedimiento';
+END;
+$$;
+
+CALL mostrar_mensaje();
