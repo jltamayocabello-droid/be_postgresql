@@ -30,5 +30,9 @@ VALUES ('Iphone', -1200)
 
 SELECT * FROM productos
 
+CREATE ROLE alumno LOGIN PASSWORD '12345';
+GRANT SELECT, INSERT ON productos TO alumno;
+GRANT USAGE, SELECT, UPDATE ON SEQUENCE productos_id_seq TO alumno;
 
+REVOKE INSERT ON productos FROM admin;
 
